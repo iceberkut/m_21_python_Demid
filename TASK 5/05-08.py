@@ -1,16 +1,15 @@
 cat_in_phrase = False
 count = 0
 phrase = ''
+number = 0
+first = -1
 while phrase != 'СТОП':
     phrase = input()
     count += 1
     while not (cat_in_phrase):
         if ('Кот' in phrase) or ('кот' in phrase):
             cat_in_phrase = True
-            number = count
+            first = count
+            number += 1
         break
-    if cat_in_phrase:
-        print(number)
-        break
-else:
-    print(-1)
+print(number, " ", first)
